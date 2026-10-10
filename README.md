@@ -4,8 +4,8 @@ Asistente conversacional basado en **RAG** (Retrieval-Augmented Generation) que 
 diagnosticar errores de Java, Maven y Spring Boot **usando solo documentación oficial indexada**, y cita el
 fragmento que respalda cada respuesta.
 
-- **Aplicación desplegada:** `PENDIENTE: pega aquí la URL pública de Streamlit Cloud`
-- **Repositorio:** `PENDIENTE: pega aquí la URL del repositorio`
+- **Aplicación desplegada:** https://springrag-ia9sjddlg7pbwirtaiyb3j.streamlit.app/
+- **Repositorio:** https://github.com/sebasanguloc/SpringRag
 - Proyecto de la asignatura *Desarrollo de aplicaciones con IA* — Avance 2.
 
 > **Control de datos.** El corpus y el índice vectorial se mantienen bajo nuestro control: los documentos se
@@ -183,7 +183,7 @@ requeriría otro enfoque (por ejemplo búsqueda híbrida con palabras clave o un
    GOOGLE_API_KEY = "tu_clave_real"
    ```
 5. Pulsa **Deploy**. La primera carga tarda unos minutos (instala dependencias y descarga el modelo de embeddings).
-6. Copia la URL pública (`https://<nombre>.streamlit.app`) y pégala arriba en este README.
+6. La URL pública queda en la parte superior de este README (`https://springrag-ia9sjddlg7pbwirtaiyb3j.streamlit.app/`).
 
 La clave **nunca** está en el repositorio: se lee de `st.secrets` (nube) o de `.env` (local).
 

@@ -1,0 +1,16 @@
+pyproject.toml
+springrag/__init__.py
+springrag/chunking.py
+springrag/config.py
+springrag/embeddings.py
+springrag/ingest.py
+springrag/llm.py
+springrag/pipeline.py
+springrag/prompts.py
+springrag/retriever.py
+springrag/sources.py
+springrag/vectorstore.py
+springrag.egg-info/PKG-INFO
+springrag.egg-info/SOURCES.txt
+springrag.egg-info/dependency_links.txt
+springrag.egg-info/top_level.txt

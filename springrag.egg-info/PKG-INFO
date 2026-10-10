@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: springrag
+Version: 0.2.0
+Summary: Asistente experto en Java y Spring basado en RAG
+Requires-Python: >=3.10

@@ -1,0 +1,52 @@
+{
+  "config": {
+    "name": "iter1_english",
+    "collection": "springrag_baseline",
+    "top_k": 4,
+    "search_in_english": true,
+    "chunk_size": 800,
+    "judge": "gemini-3.5-flash-lite"
+  },
+  "retrieval_queries": {
+    "q01": "spring.application.json server.port property default value documentation",
+    "q02": "Web server failed to start Port 8080 was already in use Spring Boot change port server.port",
+    "q03": "Spring Boot externalized configuration sources precedence order",
+    "q04": "spring.profiles.active spring boot documentation",
+    "q05": "Spring Boot profile groups definition configuration",
+    "q06": "logging level configuration package and root logger spring boot application properties",
+    "q07": "logging.file.name Spring Boot configuration",
+    "q08": "spring boot actuator default exposed endpoints management endpoints web exposure include",
+    "q09": "Spring Boot liveness readiness probe Kubernetes configuration",
+    "q10": "Spring Framework @Transactional default rollback behavior runtime exception checked exception",
+    "q11": "Maven dependency scopes default value",
+    "q12": "Apache Maven built-in build lifecycles default clean site",
+    "q13": "Maven dependency mediation dependency version conflict resolution algorithm nearest definition",
+    "q14": "Spring dependency injection types constructor setter field",
+    "q15": "spring boot datasource configuration application properties",
+    "q16": "spring boot disable specific autoconfiguration class exclude",
+    "q17": "spring.config.name configuration property custom file name spring boot",
+    "q18": "Java heap space OutOfMemoryError cause and troubleshooting",
+    "q19": "spring security jwt authentication implementation tutorial",
+    "q20": "spring boot apache kafka integration configuration guide",
+    "q21": "spring boot configure datasource postgresql properties",
+    "q22": "Spring Boot recipe for making pizza configuration properties"
+  },
+  "metrics": {
+    "faithfulness": 0.914,
+    "answer_relevancy": 0.684,
+    "context_precision": 0.656,
+    "context_recall": 0.745
+  },
+  "nan_cells": {
+    "faithfulness": 0,
+    "answer_relevancy": 0,
+    "context_precision": 0,
+    "context_recall": 0
+  },
+  "hallucination_control": {
+    "correct_refusal_rate": 1.0,
+    "n_out_of_corpus": 4,
+    "false_refusal_rate": 0.05555555555555555,
+    "n_in_corpus": 18
+  }
+}

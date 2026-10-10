@@ -1,0 +1,7 @@
+# Dependencias SOLO para evaluar con Ragas (no hacen falta para desplegar la app)
+-r requirements.txt
+ragas==0.4.3
+langchain-google-genai
+diskcache
+pandas
+matplotlib

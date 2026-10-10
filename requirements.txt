@@ -1,0 +1,18 @@
+# Versiones fijadas: el índice de Chroma se creó con estas versiones y debe cargarse con las mismas
+# (también las usa Streamlit Community Cloud al desplegar).
+python-dotenv==1.2.4
+google-genai==2.29.0
+
+# Ingesta de documentos (scripts/download_corpus.py y scripts/build_index.py)
+requests==2.34.2
+beautifulsoup4==4.15.0
+pypdf==6.20.0
+python-docx==1.2.0
+langchain-text-splitters==1.1.3
+
+# Embeddings locales y base vectorial
+fastembed==0.9.0
+chromadb==1.5.9
+
+# Interfaz
+streamlit==1.65.0

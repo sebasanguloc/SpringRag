@@ -1,0 +1,19 @@
+id,user_input,faithfulness,answer_relevancy,context_precision,context_recall
+q01,¿Cómo cambio el puerto HTTP de mi aplicación Spring Boot y cuál es el valor por defecto?,1.0,0.6879589513006481,0.9999999999,1.0
+q02,Web server failed to start. Port 8080 was already in use. ¿Qué puedo hacer?,0.5,0.8757163785596109,0.8055555555287036,1.0
+q03,¿Cuál es el orden de prioridad de las fuentes de configuración en Spring Boot?,1.0,0.7321770038263021,0.0,0.0
+q04,¿Cómo activo un perfil de Spring en una aplicación Spring Boot?,1.0,0.8695270797304719,0.49999999995,0.5
+q05,¿Qué es un grupo de perfiles y cómo se define?,0.8571428571428571,0.7257169015577296,0.99999999995,1.0
+q06,¿Cómo configuro el nivel de log de un paquete y del logger raíz?,1.0,0.5996118024399244,0.9999999999,1.0
+q07,¿Cómo hago que Spring Boot escriba los logs en un archivo?,1.0,0.8833691285868543,0.7499999999625,1.0
+q08,¿Qué endpoints de Actuator están expuestos por defecto y cómo expongo otros?,0.6666666666666666,0.4789013612426914,0.0,0.0
+q09,¿Cómo expone Spring Boot el estado de liveness y readiness para Kubernetes?,1.0,0.7508175273821659,0.8333333332916666,1.0
+q10,¿Cuándo hace rollback @Transactional por defecto?,0.75,0.0,0.0,0.5
+q11,¿Cuáles son los scopes de dependencias de Maven y cuál es el predeterminado?,1.0,0.7497389298133083,0.49999999995,0.5
+q12,¿Cuáles son los ciclos de vida de build integrados en Maven?,1.0,0.9581085548629507,0.3333333333,1.0
+q13,"Si dos dependencias traen versiones distintas de la misma librería, ¿cuál versión elige Maven?",1.0,0.5892178523268043,0.9999999999,1.0
+q14,¿Qué variantes de inyección de dependencias existen en Spring?,0.0,0.0,0.0,0.0
+q15,¿Cómo configuro la conexión a una base de datos en Spring Boot?,1.0,0.9886581822919633,0.0,0.3333333333333333
+q16,¿Cómo desactivo una clase de autoconfiguración específica?,1.0,0.6069044554973264,0.4166666666458333,1.0
+q17,¿Cómo uso un nombre de archivo de configuración distinto de application.properties?,1.0,0.6087805706592985,0.4166666666458333,0.6666666666666666
+q18,¿Qué significa el error OutOfMemoryError: Java heap space?,1.0,0.8141427764907012,0.8055555555287036,1.0

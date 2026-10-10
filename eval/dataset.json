@@ -1,0 +1,156 @@
+[
+  {
+    "id": "q01",
+    "type": "in_corpus",
+    "source": "sb_howto_webserver",
+    "question": "¿Cómo cambio el puerto HTTP de mi aplicación Spring Boot y cuál es el valor por defecto?",
+    "ground_truth": "El puerto HTTP por defecto es 8080. Se cambia con la propiedad server.port (por ejemplo en application.properties). Con server.port=0 se busca un puerto libre y con server.port=-1 se desactivan los endpoints HTTP."
+  },
+  {
+    "id": "q02",
+    "type": "in_corpus",
+    "source": "sb_howto_webserver",
+    "question": "Web server failed to start. Port 8080 was already in use. ¿Qué puedo hacer?",
+    "ground_truth": "El puerto 8080, que es el predeterminado, ya está siendo usado por otro proceso. Se puede cambiar el puerto de la aplicación con la propiedad server.port en application.properties, o usar server.port=0 para que se asigne un puerto libre."
+  },
+  {
+    "id": "q03",
+    "type": "in_corpus",
+    "source": "sb_external_config",
+    "question": "¿Cuál es el orden de prioridad de las fuentes de configuración en Spring Boot?",
+    "ground_truth": "Las fuentes posteriores sobrescriben los valores de las anteriores. El orden empieza con las propiedades por defecto, seguidas de @PropertySource, los archivos de configuración como application.properties, las variables de entorno del sistema operativo, las propiedades del sistema Java, SPRING_APPLICATION_JSON y por último los argumentos de línea de comandos."
+  },
+  {
+    "id": "q04",
+    "type": "in_corpus",
+    "source": "sb_external_config",
+    "question": "¿Cómo activo un perfil de Spring en una aplicación Spring Boot?",
+    "ground_truth": "Con la propiedad spring.profiles.active, por ejemplo spring.profiles.active=dev,hsqldb en application.properties, o por línea de comandos con --spring.profiles.active=dev,hsqldb. Si no hay ningún perfil activo se habilita el perfil llamado default."
+  },
+  {
+    "id": "q05",
+    "type": "in_corpus",
+    "source": "sb_profiles",
+    "question": "¿Qué es un grupo de perfiles y cómo se define?",
+    "ground_truth": "Un grupo de perfiles permite definir un nombre lógico para un conjunto de perfiles relacionados. Por ejemplo, con spring.profiles.group.production[0]=proddb y spring.profiles.group.production[1]=prodmq, al activar el perfil production se activan también proddb y prodmq."
+  },
+  {
+    "id": "q06",
+    "type": "in_corpus",
+    "source": "sb_logging",
+    "question": "¿Cómo configuro el nivel de log de un paquete y del logger raíz?",
+    "ground_truth": "Se usa logging.level.<nombre-del-logger>=<nivel>, donde el nivel puede ser TRACE, DEBUG, INFO, WARN, ERROR, FATAL u OFF. El logger raíz se configura con logging.level.root."
+  },
+  {
+    "id": "q07",
+    "type": "in_corpus",
+    "source": "sb_logging",
+    "question": "¿Cómo hago que Spring Boot escriba los logs en un archivo?",
+    "ground_truth": "Por defecto Spring Boot solo registra en la consola. Para escribir archivos de log hay que definir la propiedad logging.file.name o logging.file.path. Si se definen ambas, logging.file.path se ignora y solo se usa logging.file.name."
+  },
+  {
+    "id": "q08",
+    "type": "in_corpus",
+    "source": "sb_actuator_endpoints",
+    "question": "¿Qué endpoints de Actuator están expuestos por defecto y cómo expongo otros?",
+    "ground_truth": "Por defecto solo el endpoint health está expuesto por HTTP y JMX. Para exponer otros se usan las propiedades de inclusión y exclusión, como management.endpoints.web.exposure.include para HTTP y management.endpoints.jmx.exposure.include para JMX."
+  },
+  {
+    "id": "q09",
+    "type": "in_corpus",
+    "source": "sb_actuator_endpoints",
+    "question": "¿Cómo expone Spring Boot el estado de liveness y readiness para Kubernetes?",
+    "ground_truth": "En un entorno Kubernetes, Actuator obtiene la información de liveness y readiness de la interfaz ApplicationAvailability y la expone con los indicadores de salud LivenessStateHealthIndicator y ReadinessStateHealthIndicator, que aparecen en el endpoint global /actuator/health."
+  },
+  {
+    "id": "q10",
+    "type": "in_corpus",
+    "source": "sf_transactional",
+    "question": "¿Cuándo hace rollback @Transactional por defecto?",
+    "ground_truth": "Por defecto cualquier RuntimeException o Error provoca rollback, mientras que las excepciones comprobadas (checked) no lo provocan. Este comportamiento por defecto se puede cambiar."
+  },
+  {
+    "id": "q11",
+    "type": "in_corpus",
+    "source": "mvn_dependency",
+    "question": "¿Cuáles son los scopes de dependencias de Maven y cuál es el predeterminado?",
+    "ground_truth": "Maven tiene 6 scopes: compile, provided, runtime, test, system e import. El scope predeterminado es compile, que se usa si no se especifica ninguno."
+  },
+  {
+    "id": "q12",
+    "type": "in_corpus",
+    "source": "mvn_lifecycle",
+    "question": "¿Cuáles son los ciclos de vida de build integrados en Maven?",
+    "ground_truth": "Hay tres ciclos de vida de build integrados: default, clean y site. El ciclo default se encarga del despliegue del proyecto, clean de la limpieza del proyecto y site de la creación del sitio web del proyecto."
+  },
+  {
+    "id": "q13",
+    "type": "in_corpus",
+    "source": "mvn_dependency",
+    "question": "Si dos dependencias traen versiones distintas de la misma librería, ¿cuál versión elige Maven?",
+    "ground_truth": "Maven aplica la mediación de dependencias (dependency mediation) y elige la definición más cercana (nearest definition): usa la versión de la dependencia más cercana al proyecto en el árbol de dependencias. Siempre se puede garantizar una versión declarándola explícitamente en el POM del proyecto."
+  },
+  {
+    "id": "q14",
+    "type": "in_corpus",
+    "source": "sf_dependencies",
+    "question": "¿Qué variantes de inyección de dependencias existen en Spring?",
+    "ground_truth": "Existen dos variantes principales: la inyección de dependencias basada en constructor, en la que el contenedor invoca un constructor con argumentos que representan las dependencias, y la inyección basada en setters."
+  },
+  {
+    "id": "q15",
+    "type": "in_corpus",
+    "source": "sb_sql",
+    "question": "¿Cómo configuro la conexión a una base de datos en Spring Boot?",
+    "ground_truth": "Se usan las propiedades spring.datasource.url, spring.datasource.username y spring.datasource.password. Como mínimo hay que indicar la URL; de lo contrario Spring Boot intenta autoconfigurar una base de datos embebida. Spring Boot puede deducir la clase del driver JDBC a partir de la URL."
+  },
+  {
+    "id": "q16",
+    "type": "in_corpus",
+    "source": "sb_auto_config",
+    "question": "¿Cómo desactivo una clase de autoconfiguración específica?",
+    "ground_truth": "Se puede usar el atributo exclude de @SpringBootApplication (o exclude y excludeName de @EnableAutoConfiguration), o bien la propiedad spring.autoconfigure.exclude. Se pueden definir exclusiones tanto a nivel de anotación como con la propiedad."
+  },
+  {
+    "id": "q17",
+    "type": "in_corpus",
+    "source": "sb_external_config",
+    "question": "¿Cómo uso un nombre de archivo de configuración distinto de application.properties?",
+    "ground_truth": "Se especifica el nombre con la propiedad de entorno spring.config.name. Por ejemplo, para buscar los archivos myproject.properties y myproject.yaml se ejecuta la aplicación con --spring.config.name=myproject. Con variables de entorno se puede usar SPRING_CONFIG_NAME."
+  },
+  {
+    "id": "q18",
+    "type": "in_corpus",
+    "source": "java_troubleshooting",
+    "question": "¿Qué significa el error OutOfMemoryError: Java heap space?",
+    "ground_truth": "Indica que no se pudo asignar un objeto en el heap de Java. No implica necesariamente una fuga de memoria: puede ser un problema de configuración, por ejemplo que el tamaño de heap especificado, o el predeterminado, sea insuficiente para la aplicación."
+  },
+  {
+    "id": "q19",
+    "type": "out_of_corpus",
+    "source": "",
+    "question": "¿Cómo implemento autenticación con JWT usando Spring Security?",
+    "ground_truth": "La información no está en la base de conocimiento."
+  },
+  {
+    "id": "q20",
+    "type": "out_of_corpus",
+    "source": "",
+    "question": "¿Cómo integro Apache Kafka con Spring Boot?",
+    "ground_truth": "La información no está en la base de conocimiento."
+  },
+  {
+    "id": "q21",
+    "type": "out_of_corpus",
+    "source": "",
+    "question": "¿Cómo configuro Django con PostgreSQL?",
+    "ground_truth": "La información no está en la base de conocimiento."
+  },
+  {
+    "id": "q22",
+    "type": "out_of_corpus",
+    "source": "",
+    "question": "Dame una receta de pizza.",
+    "ground_truth": "La información no está en la base de conocimiento."
+  }
+]
